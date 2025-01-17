@@ -16,7 +16,7 @@ function showSection(sectionId) {
     alert("Logging out...");
     // Here you can implement real logout logic like clearing session data or redirecting.
     // For now, it's just an alert.
-    window.location.href = 'login.html'; // Redirect to the login page (modify as needed)
+    window.location.href = 'index.html'; // Redirect to the login page (modify as needed)
   }
   
   // Toggle Sidebar (Hamburger Menu)
