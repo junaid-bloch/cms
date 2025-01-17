@@ -12,7 +12,7 @@ function showSection(sectionId) {
 // Function to handle logout
 function logout() {
     alert("Logging out...");
-    window.location.href = 'login.html'; // Redirect to login page
+    window.location.href = 'index.html'; // Redirect to login page
 }
 
 // Toggle Sidebar
