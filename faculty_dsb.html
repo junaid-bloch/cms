@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="faculty_style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="logo">
+        <h2>Campus System</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+          <li><a href="#" onclick="showSection('schedule')">Class Schedule</a></li>
+          <li><a href="#" onclick="showSection('attendance')">Mark Attendance</a></li>
+          <li><a href="#" onclick="showSection('assignments')">Assignments</a></li>
+          <li><a href="#" onclick="showSection('studentPerformance')">Student Performance</a></li>
+          <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+          <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="user-info">
+          <h3>Welcome, Faculty Name</h3>
+          <button onclick="toggleNotifications()">Notifications (5)</button>
+        </div>
+        <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard content-section" id="dashboard">
+        <h2>Your Dashboard</h2>
+        <p>Overview of your upcoming classes, tasks, and announcements.</p>
+      </div>
+
+      <div class="schedule content-section" id="schedule" style="display:none;">
+        <h2>Class Schedule</h2>
+        <ul>
+          <li>Monday: 10 AM - 12 PM (Mathematics - Class A)</li>
+          <li>Tuesday: 1 PM - 3 PM (Physics - Class B)</li>
+          <li>Wednesday: 10 AM - 12 PM (Chemistry - Class A)</li>
+        </ul>
+      </div>
+
+      <div class="attendance content-section" id="attendance" style="display:none;">
+        <h2>Mark Attendance</h2>
+        <p>Select a class to mark attendance:</p>
+        <ul>
+          <li><button>Mathematics - Class A</button></li>
+          <li><button>Physics - Class B</button></li>
+          <li><button>Chemistry - Class A</button></li>
+        </ul>
+      </div>
+
+      <div class="assignments content-section" id="assignments" style="display:none;">
+        <h2>Assignments</h2>
+        <ul>
+          <li>Create a new assignment for Mathematics (Due: 25th Jan)</li>
+          <li>Review submissions for Physics (Due: 22nd Jan)</li>
+        </ul>
+      </div>
+
+      <div class="studentPerformance content-section" id="studentPerformance" style="display:none;">
+        <h2>Student Performance</h2>
+        <p>Review student grades and feedback:</p>
+        <ul>
+          <li>Mathematics: Average Grade - B+</li>
+          <li>Physics: Average Grade - A-</li>
+          <li>Chemistry: Average Grade - B</li>
+        </ul>
+      </div>
+
+      <div class="profile content-section" id="profile" style="display:none;">
+        <h2>Profile</h2>
+        <ul>
+          <li>Name: Faculty Name</li>
+          <li>Email: faculty@example.com</li>
+          <li>Department: Science</li>
+        </ul>
+        <button>Edit Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="notifications" class="notifications">
+    <div class="notification-item">Meeting scheduled with Class A at 2 PM.</div>
+    <div class="notification-item">New assignment submissions for Physics.</div>
+    <div class="notification-item">Exam results updated for Mathematics.</div>
+  </div>
+
+  <script src="faculty_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student_style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="logo">
+        <h2>Campus System</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+          <li><a href="#" onclick="showSection('courses')">Courses</a></li>
+          <li><a href="#" onclick="showSection('attendance')">Attendance</a></li>
+          <li><a href="#" onclick="showSection('assignments')">Assignments</a></li>
+          <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+          <li><a href="#" onclick="showSection('circulars')">Circulars</a></li>
+          <li><a href="#" onclick="showSection('transportation')">Transportation</a></li>
+          <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="user-info">
+          <h3>Welcome, Student Name</h3>
+          <button onclick="toggleNotifications()">Notifications (3)</button>
+        </div>
+        <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard" id="dashboard" class="content-section">
+        <h2>Your Dashboard</h2>
+        <p>Overview of your performance, upcoming events, and more.</p>
+      </div>
+
+      <div class="courses" id="courses" class="content-section" style="display:none;">
+        <h2>Your Courses</h2>
+        <ul>
+          <li>Mathematics</li>
+          <li>Physics</li>
+          <li>Computer Science</li>
+          <li>History</li>
+        </ul>
+      </div>
+
+      <div class="attendance" id="attendance" class="content-section" style="display:none;">
+        <h2>Attendance</h2>
+        <ul>
+        <li>Overall Attendance: 85%</li>
+        <li>Mathematics: 90%</li>
+        <li>Physics: 80%</li>
+    </ul>
+    </div>
+
+      <div class="assignments" id="assignments" class="content-section" style="display:none;">
+        <h2>Assignments</h2>
+        <ul>
+          <li>Mathematics - Due: 20th Jan</li>
+          <li>Physics - Due: 22nd Jan</li>
+          <li>Computer Science - Due: 25th Jan</li>
+        </ul>
+      </div>
+
+      <div class="profile" id="profile" class="content-section" style="display:none;">
+        <h2>Profile</h2>
+        <ul>
+        <li>Name: Student Name</li>
+        <li>Email: student@example.com</li>
+        </ul>
+        <button>Edit Profile</button>
+      </div>
+
+      <div class="circulars" id="circulars" class="content-section" style="display:none;">
+        <h2>Circulars</h2>
+        <ul>
+          <li>New assignments uploaded for Mathematics.</li>
+          <li>Exam schedule has been updated.</li>
+          <li>New circular for library timings.</li>
+        </ul>
+      </div>
+
+      <div class="transportation" id="transportation" class="content-section" style="display:none;">
+        <h2>Transportation</h2>
+        <ul>
+        <li>Route 1: A to B (8:00 AM)</li>
+        <li>Route 2: B to C (9:00 AM)</li>
+        <li>Route 3: C to A (5:00 PM)</li>
+        </ul>
+    </div>
+
+    </div>
+  </div>
+
+  <div id="notifications" class="notifications">
+    <div class="notification-item">New assignment uploaded for Mathematics.</div>
+    <div class="notification-item">Grades for Physics are now available.</div>
+    <div class="notification-item">Course registration is now open.</div>
+  </div>
+
+  <script src="student_script.js"></script>
+</body>
+</html>

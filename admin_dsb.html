@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="logo">
+        <h2>Admin Panel</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+          <li><a href="#" onclick="showSection('user-management')">User Management</a></li>
+          <li><a href="#" onclick="showSection('course-management')">Course Management</a></li>
+          <li><a href="#" onclick="showSection('attendance')">Attendance</a></li>
+          <li><a href="#" onclick="showSection('notifications')">Notifications</a></li>
+          <li><a href="#" onclick="showSection('reports')">Reports</a></li>
+          <li><a href="#" onclick="showSection('settings')">Settings</a></li>
+          <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="user-info">
+          <h3>Welcome, Admin</h3>
+          <button onclick="toggleNotifications()">Notifications (5)</button>
+        </div>
+        <div class="hamburger-menu" onclick="toggleSidebar()">&#9776;</div>
+      </header>
+
+      <!-- Dashboard Section -->
+      <div id="dashboard" class="content-section">
+        <h2>Admin Dashboard</h2>
+        <p>Overview of system stats and quick links.</p>
+      </div>
+
+      <!-- User Management Section -->
+      <div id="user-management" class="content-section" style="display: none;">
+        <h2>User Management</h2>
+        <ul>
+          <li>View All Students</li>
+          <li>View All Faculty</li>
+          <li>Add New User</li>
+          <li>Remove User</li>
+        </ul>
+      </div>
+
+      <!-- Course Management Section -->
+      <div id="course-management" class="content-section" style="display: none;">
+        <h2>Course Management</h2>
+        <ul>
+          <li>View All Courses</li>
+          <li>Add New Course</li>
+          <li>Update Course Details</li>
+          <li>Delete Course</li>
+        </ul>
+      </div>
+
+      <!-- Attendance Section -->
+      <div id="attendance" class="content-section" style="display: none;">
+        <h2>Attendance</h2>
+        <ul>
+          <li>View Attendance Summary</li>
+          <li>Generate Attendance Reports</li>
+          <li>Attendance Records for Specific Users</li>
+        </ul>
+      </div>
+
+      <!-- Notifications Section -->
+      <div id="notifications" class="content-section" style="display: none;">
+        <h2>Notifications</h2>
+        <ul>
+          <li>Send Notifications to Users</li>
+          <li>View System Notifications</li>
+          <li>Notification History</li>
+        </ul>
+      </div>
+
+      <!-- Reports Section -->
+      <div id="reports" class="content-section" style="display: none;">
+        <h2>Reports</h2>
+        <ul>
+          <li>Generate System Usage Report</li>
+          <li>Attendance Reports</li>
+          <li>Course Performance Reports</li>
+        </ul>
+      </div>
+
+      <!-- Settings Section -->
+      <div id="settings" class="content-section" style="display: none;">
+        <h2>Settings</h2>
+        <ul>
+          <li>Update Profile</li>
+          <li>Change Password</li>
+          <li>System Preferences</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="notification-panel" class="notifications">
+    <div class="notification-item">System maintenance scheduled for Friday.</div>
+    <div class="notification-item">New user registration request.</div>
+    <div class="notification-item">Weekly system usage report is available.</div>
+  </div>
+
+  <script src="admin_script.js"></script>
+</body>
+</html>

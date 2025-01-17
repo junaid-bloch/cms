@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Management System</title>
+  <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <!-- Login Form -->
+      <div class="box front">
+        <h1>Campus Management System</h1>
+        <form id="login-form">
+          <select id="role-select" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+            <option value="admin">Admin</option>
+          </select>
+          <input type="text" id="uname" placeholder="Username" required />
+          
+          <!-- Role selection dropdown -->
+
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="https://www.svitvasad.ac.in/" target="_blank">Visit College Website</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="login_script.js"></script>
+</body>
+</html>
